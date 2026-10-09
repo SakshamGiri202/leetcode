@@ -3,6 +3,11 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
+
+
+        """
+             approach 1 using map for counting the freqency to same element and then sort it in the nums list and then return it
+        """
         mp = {}
 
         n = len(nums)
