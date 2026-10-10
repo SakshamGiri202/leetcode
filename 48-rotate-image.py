@@ -3,9 +3,18 @@ class Solution:
         """
         Do not return anything, modify matrix in-place instead.
         """
-        for i in range(len(matrix)):
-            for j in range(i, len(matrix)):
+
+        n = len(matrix)
+        # transpose
+        for i in range(n):
+            for j in range(i, n):
                 matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
         
-        for i in matrix:
-            i.reverse()
+        # reflection
+        
+        # for i in matrix:
+        #     i.reverse()
+    
+        for i in range(n):
+            for j in range(n // 2):
+                matrix[i][j], matrix[i][n-j-1] = matrix[i][n-j-1], matrix[i][j]
