@@ -1,17 +1,25 @@
+from collections import defaultdict
+
 class Solution:
     def sortByBits(self, arr: list[int]) -> list[int]:
 
         n = len(arr)
-        # mp = {}
+        groups = defaultdict(list)
+        sorted_arr = []
+        for num in arr:
+            count = num.bit_count()
+            groups[count].append(num)
+        
 
-        # sorted_arr = []
-        # for i in range(n):
-        #     num = arr[i]
-        #     count = num.bit_count()
-        #     mp[arr[i]] = count
+
+        for count in sorted(groups.keys()):
+            if count in groups:
+                groups[count].sort()
+                sorted_arr.extend(groups[count])
+
 
        
-        sorted_arr = sorted(arr, key=lambda x: (x.bit_count(), x))
+        # sorted_arr = sorted(arr, key=lambda x: (x.bit_count(), x))
 
         return sorted_arr
 
