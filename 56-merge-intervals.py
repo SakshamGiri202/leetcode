@@ -1,5 +1,10 @@
 class Solution:
+
+
     def merge(self, intervals: list[list[int]]) -> list[list[int]]:
+
+
+      
         merged = []
         intervals.sort()
 
@@ -15,4 +20,12 @@ class Solution:
         
         return merged
 
-        
+
+
+
+
+     
+
+      
+
+     
