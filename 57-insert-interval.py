@@ -2,15 +2,14 @@ class Solution:
     def insert(self, intervals: list[list[int]], newInterval: list[int]) -> list[list[int]]:
         n = len(intervals)
        
-        inserted = False
+    
         for i in range(n):
             if newInterval[0] <= intervals[i][0]:
                 intervals.insert(i, newInterval)
-                inserted = True
-                break
+                
 
 
-        if not inserted:
+        if len(intervals) == n:
                 intervals.append(newInterval)
 
         ret_intervals = []
