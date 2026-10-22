@@ -7,8 +7,8 @@ class Solution:
             mp[n] = mp.get(n, 0) + 1
 
         sorted_keys = list(mp.keys())
+        
         sorted_keys.sort(key=lambda x: mp[x], reverse=True)
-
         count = 0
         for i in sorted_keys:
             if count < k:
