@@ -21,7 +21,7 @@ class Solution:
             
             
                
-        return True if n % len(substring) == 0 else False
+        
 
        
         
