@@ -22,7 +22,7 @@ class Solution:
         
         # return temp
 
-        # approach 2nd using brute force
+        # approach 2nd using optmise ways
 
         slow = head
         fast = head
