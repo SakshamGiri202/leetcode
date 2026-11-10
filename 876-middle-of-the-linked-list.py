@@ -8,16 +8,27 @@ class Solution:
 
         # approach 1st using brute force method
 
-        count = 0
-        temp = head
-        while temp != None:
-            count += 1
-            temp = temp.next
+        # count = 0
+        # temp = head
+        # while temp != None:
+        #     count += 1
+        #     temp = temp.next
 
-        mid = count//2
+        # mid = count//2
 
-        temp = head
-        for _ in range(mid):
-            temp = temp.next
+        # temp = head
+        # for _ in range(mid):
+        #     temp = temp.next
         
-        return temp
+        # return temp
+
+        # approach 2nd using brute force
+
+        slow = head
+        fast = head
+
+        while fast != None and fast.next != None:
+            slow = slow.next
+            fast = fast.next.next
+
+        return slow
