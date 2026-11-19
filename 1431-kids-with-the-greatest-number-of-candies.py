@@ -20,4 +20,4 @@ class Solution:
                 res.insert(i, True)
 
         return res
-            
+        
