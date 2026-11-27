@@ -17,12 +17,29 @@ class Solution:
 
         # 2nd approach using set hashmap
         
-        seen = set()
+        # seen = set()
         
-        for num in nums:
-            if num not in seen:
-                if nums.count(num) > len(nums) // 2:
-                    return num
-                else:
-                    seen.add(num)
+        # for num in nums:
+        #     if num not in seen:
+        #         if nums.count(num) > len(nums) // 2:
+        #             return num
+        #         else:
+        #             seen.add(num)
+
+        # 3nd approach using boyer and moore voting
+
+        n = len(nums)
+        count = 0
+        maj = nums[0]
+        for i in range(n):
+            if count == 0:
+                maj = nums[i]
+                count = 1
+            elif nums[i] == maj:
+                count += 1
+            else:
+                count -= 1
+        
+        return maj
+            
 
