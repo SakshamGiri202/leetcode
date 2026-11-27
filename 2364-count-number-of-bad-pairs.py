@@ -1,7 +1,7 @@
 class Solution:
     def countBadPairs(self, nums: list[int]) -> int:
         
-        # 1st approach using bruteforce method
+        # 1st approach using bruteforce method occurs tle
         # n = len(nums)
         # count = 0
         # i = 0 
